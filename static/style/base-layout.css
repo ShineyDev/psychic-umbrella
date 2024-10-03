@@ -1,0 +1,5 @@
+.base-content {
+    --_base-content-margin: 50px;
+
+    margin: var(--_base-content-margin);
+}

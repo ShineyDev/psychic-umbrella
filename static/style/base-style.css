@@ -1,0 +1,45 @@
+:root {
+    --color-gray-darkest: #1A1A1A;
+    --color-gray-darker: #333333;
+    --color-gray-dark: #4D4D4D;
+    --color-gray: #808080;
+    --color-gray-light: #B3B3B3;
+    --color-gray-lighter: #CCCCCC;
+    --color-gray-lightest: #E6E6E6;
+
+    --color-accent: #FFB3FF;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    background: var(--color-gray-darkest);
+}
+
+abbr[title] {
+    border-bottom: none;
+    cursor: inherit;
+    text-decoration: none;
+}
+
+@media print, (hover: none) {
+
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+
+}
+
+/* todo */
+
+code, kbd {
+    border: 1px solid var(--color-accent);
+    border-radius: 5px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    box-sizing: border-box;
+    padding: 0 5px;
+    vertical-align: middle;
+}

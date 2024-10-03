@@ -1,0 +1,98 @@
+/* TYPEFACE DISPLAY */
+
+html {
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, samp {
+    display: block;
+    margin-block: 1rem 1rem;
+}
+
+code, kbd {
+    display: inline;
+    margin-block: 0.25rem 0.25rem;
+    margin-inline: 0.125rem 0.125rem;
+}
+
+a {
+    all: unset;
+    cursor: revert;
+}
+
+/* TYPEFACE FAMILY */
+
+html {
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+code, kbd, pre, samp {
+    font-family: "Noto Mono", "Lucida Console", Monaco, monospace;
+}
+
+/* TYPEFACE SIZE */
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+code, h5, kbd, p, pre, samp {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.5rem;
+}
+
+/* TYPEFACE WEIGHT */
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    font-weight: 500;
+}
+
+code, kbd, p, pre, samp {
+    font-weight: 300;
+}
+
+/* TYPEFACE EMPHASIS */
+
+em {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+:is(h1, h2, h3) > em.bold {
+    font-weight: 900;
+}
+
+:is(h4, h5, h6) > em.bold {
+    font-weight: 700;
+}
+
+:is(code, kbd, p, pre, samp) > em.bold {
+    font-weight: 500;
+}
+
+em.italic {
+    font-style: italic;
+}
+
+em.underline {
+    text-decoration: underline;
+}

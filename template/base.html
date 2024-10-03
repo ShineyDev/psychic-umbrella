@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    {% block head %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="https://{{ base_hostname }}" target="_self" />
+
+    <!-- TYPEFACE -->
+    <link href="{{ path_static }}/font/noto/noto-mono.css" rel="stylesheet" />
+    <link href="{{ path_static }}/font/noto/noto-sans.css" rel="stylesheet" />
+    <link href="{{ path_static }}/css/base-typeface.css" rel="stylesheet" />
+    {% block page_typeface %}{% endblock %}
+
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    {% block page_icons %}{% endblock %}
+
+    <!-- LAYOUT -->
+    <link href="{{ path_static }}/css/normalize.css" rel="stylesheet" />
+    <link href="{{ path_static }}/css/base-layout.css" rel="stylesheet" />
+    {% block page_layout %}{% endblock %}
+
+    <!-- STYLE -->
+    <link href="{{ path_static }}/css/base-style.css" rel="stylesheet" />
+    {% block page_style %}{% endblock %}
+
+    <title>{% block page_title %}bloop{% endblock %}</title>
+
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; Copyright 2024-present ShineyDev</p>
+    </footer>
+
+    {% endblock %}
+</body>
+</html>
