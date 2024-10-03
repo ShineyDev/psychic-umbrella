@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 
+{% block page_typeface %}
+<link href="{{ path_static }}/style/error-typeface.css" rel="stylesheet" />
+{% endblock %}
+
+{% block page_layout %}
+<link href="{{ path_static }}/style/error-layout.css" rel="stylesheet" />
+{% endblock %}
+
+{% block page_title %}{{ error_code }}{% endblock %}
+
 {% block content %}
 
-<div>
-    <h1>{{ error_code }}</h1>
-    <h2>{{ error_message }}</h2>
-    <p><a href="{{ home_url }}">Go Home</a></p>
+<div class="error-content">
+    <h1 class="error-code">{{ error_code }}</h1>
+    <p class="error-message">{{ error_message }}</p>
+    <button href="{{ home_url }}">Go Home</button>
 </div>
 
 {% endblock %}

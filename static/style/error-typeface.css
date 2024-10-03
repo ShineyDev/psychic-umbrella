@@ -1,0 +1,11 @@
+.error-code {
+    font-size: 10rem;
+    font-weight: 900;
+    margin: 50px auto 50px auto;
+}
+
+.error-message {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 50px auto 50px auto;
+}
