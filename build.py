@@ -17,6 +17,7 @@ def render_error(environment: Environment, /, *, code: int, message: str) -> str
     template = environment.get_template("error.html")
 
     return template.render(
+        base_hostname="psychic-umbrella.shiney.dev",
         error_code=code,
         error_message=message,
         home_url="/",
