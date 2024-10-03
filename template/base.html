@@ -6,7 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    {% if build_environment == "production" %}
     <base href="https://{{ base_hostname }}" target="_self" />
+    {% endif %}
 
     <!-- NORMALIZE -->
     <link href="{{ path_static }}/style/normalize.css" rel="stylesheet" />

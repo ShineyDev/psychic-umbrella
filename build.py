@@ -11,6 +11,7 @@ import jinja2 as jinja
 
 
 path_static = "_static"
+build_environment = "production" if os.getenv("GITHUB_PAGES") else "development"
 
 
 def render_error(environment: Environment, /, *, code: int, message: str) -> str:
@@ -18,6 +19,7 @@ def render_error(environment: Environment, /, *, code: int, message: str) -> str
 
     return template.render(
         base_hostname="psychic-umbrella.shiney.dev",
+        build_environment=build_environment,
         error_code=code,
         error_message=message,
         home_url="/",
@@ -30,6 +32,7 @@ def render_index(environment: Environment, /) -> str:
 
     return template.render(
         base_hostname="psychic-umbrella.shiney.dev",
+        build_environment=build_environment,
         path_static=path_static,
     )
 
