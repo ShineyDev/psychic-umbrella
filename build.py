@@ -19,7 +19,8 @@ def render_error(environment: Environment, /, *, code: int, message: str) -> str
     return template.render(
         error_code=code,
         error_message=message,
-        home_url="/"
+        home_url="/",
+        path_static=path_static,
     )
 
 
