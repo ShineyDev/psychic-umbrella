@@ -8,6 +8,9 @@
 
     <base href="https://{{ base_hostname }}" target="_self" />
 
+    <!-- NORMALIZE -->
+    <link href="{{ path_static }}/style/normalize.css" rel="stylesheet" />
+
     <!-- TYPEFACE -->
     <link href="{{ path_static }}/font/noto/noto-mono.css" rel="stylesheet" />
     <link href="{{ path_static }}/font/noto/noto-sans.css" rel="stylesheet" />
@@ -19,7 +22,6 @@
     {% block page_icons %}{% endblock %}
 
     <!-- LAYOUT -->
-    <link href="{{ path_static }}/style/normalize.css" rel="stylesheet" />
     <link href="{{ path_static }}/style/base-layout.css" rel="stylesheet" />
     {% block page_layout %}{% endblock %}
 
