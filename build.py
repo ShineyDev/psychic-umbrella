@@ -45,6 +45,11 @@ def main():
         "index": render_index(environment),
     }
 
+    try:
+        shutil.rmtree("./build")
+    except FileNotFoundError:
+        pass
+
     os.mkdir("./build")
 
     for page_name, page_content in pages.items():
