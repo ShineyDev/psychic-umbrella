@@ -10,6 +10,25 @@
     <base href="https://{{ base_hostname }}" target="_self" />
     {% endif %}
 
+    <!-- PREX -->
+    <link rel="preload" href="/_static/font/noto/noto-emoji.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-mono-100.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-mono-300.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-mono-500.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-mono-700.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-mono-900.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-100.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-100i.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-300.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-300i.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-500.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-500i.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-700.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-700i.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-900.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="/_static/font/noto/noto-sans-900i.ttf" as="font" type="font/ttf">
+    {% block page_prex %}{% endblock %}
+
     <!-- NORMALIZE -->
     <link href="{{ path_static }}/style/normalize.css" rel="stylesheet" />
 
