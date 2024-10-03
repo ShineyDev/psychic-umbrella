@@ -43,3 +43,15 @@ code, kbd {
     padding: 0 5px;
     vertical-align: middle;
 }
+
+.button {
+    background-color: var(--color-gray-darker);
+    border-radius: 5px;
+    color: var(--color-gray-lighter);
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+}
+
+.button:hover {
+    background-color: var(--color-gray-dark);
+}
