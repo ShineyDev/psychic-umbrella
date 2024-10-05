@@ -8,10 +8,10 @@ on:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
-  PYTHON_VERSION: 3.9
+  PYTHON_VERSION: 3.10
 
 permissions:
   contents: read
@@ -19,36 +19,31 @@ permissions:
   pages: write
 
 jobs:
-  build:
-    name: Build
+  job:
+    if: github.repository_owner == 'ShineyDev'
+
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout ${{ github.repository }}
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
+    - name: Configure
+      uses: actions/configure-pages@v5
+
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
 
     - name: Build
       run: python3 build.py
 
     - name: Upload
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: build
 
-  deploy:
-    needs: build
-
-    name: Deploy
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-
-    steps:
     - name: Deploy
-      id: deploy
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
