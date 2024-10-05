@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% if build_environment == "production" %}
+    {% if base_hostname is not none %}
     <base href="https://{{ base_hostname }}" target="_self" />
     {% endif %}
 
