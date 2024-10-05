@@ -45,7 +45,7 @@ jobs:
         python -m pip install --upgrade -r requirements.txt
 
     - name: Build
-      run: python3 build.py ${{ steps.configure.outputs.base_url }}
+      run: python3 build.py "${{ steps.configure.outputs.base_url }}"
 
     - name: Upload
       uses: actions/upload-pages-artifact@v3
